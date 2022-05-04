@@ -20,17 +20,17 @@ PAGE_NO = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Uploading...📤"
-    STATUS_DOWNLOADING = "Downloading...📥"
-    STATUS_CLONING = "Cloning...♻️"
-    STATUS_WAITING = "Queued...💤"
-    STATUS_FAILED = "Failed 🚫. Cleaning Download..."
-    STATUS_PAUSE = "Paused...⛔️"
-    STATUS_ARCHIVING = "Archiving...🔐"
-    STATUS_EXTRACTING = "Extracting...📂"
-    STATUS_SPLITTING = "Splitting...✂️"
-    STATUS_CHECKING = "CheckingUp...📝"
-    STATUS_SEEDING = "Seeding...🌧"
+    STATUS_UPLOADING = "Ⴎᴘʟᴏᴀᴅɪɴɢ...📤"
+    STATUS_DOWNLOADING = "Ꭰᴏᴡɴʟᴏᴀᴅɪɴɢ...📥"
+    STATUS_CLONING = "Ꮯʟᴏɴɪɴɢ...♻️"
+    STATUS_WAITING = "Ϙᴜᴇᴜᴇᴅ...💤"
+    STATUS_FAILED = "Ғᴀɪʟᴇᴅ 🚫. Ꮯʟᴏɴɪɴɢ Ꭰᴏᴡɴʟᴏᴀᴅ..."
+    STATUS_PAUSE = "Ꮲᴀᴜsᴇᴅ...⛔️"
+    STATUS_ARCHIVING = "Ꭺʀᴄʜɪᴇᴠɪɴɢ...🔐"
+    STATUS_EXTRACTING = "Ꭼxᴛʀᴀᴄᴛɪɴɢ...📂"
+    STATUS_SPLITTING = "Տᴘʟɪᴛᴛɪɴɢ...✂️"
+    STATUS_CHECKING = "Ꮯʜᴇᴄᴋɪɴɢ Ⴎᴘ...📝"
+    STATUS_SEEDING = "Տᴇᴇᴅɪɴɢ...🌧"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -105,8 +105,8 @@ def get_progress_bar_string(status):
     p = 0 if total == 0 else round(completed * 100 / total)
     p = min(max(p, 0), 100)
     cFull = p // 8
-    p_str = '▰' * cFull
-    p_str += '▱' * (12 - cFull)
+    p_str = '★' * cFull
+    p_str += '☆' * (12 - cFull)
     p_str = f"[{p_str}]"
     return p_str
 
@@ -151,7 +151,7 @@ def get_readable_message():
                            f" | <b>Leechers:</b> {download.torrent_info().num_leechs}"
                 except:
                     pass
-                msg += f'\n<b>User:</b> ️<code>{download.message.from_user.first_name}</code>️(<code>{download.message.from_user.id}</code>)'
+                msg += f'\n<b>Ꭱᴇǫ Ᏼʏ:</b> ️<code>{download.message.from_user.first_name}</code>️(<code>{download.message.from_user.id}</code>)'
                 msg += f"\n<b>To Stop:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n<b>Size: </b>{download.size()}"
