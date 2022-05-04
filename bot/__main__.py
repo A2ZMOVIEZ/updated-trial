@@ -62,8 +62,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Updates Channel", "https://t.me/heliosmirror")
-    buttons.buildbutton("Support Group", "https://t.me/mirrorsociety")
+    buttons.buildbutton("Updates Channel", "https://t.me/+8M15WxLlscA4OWE1")
+    buttons.buildbutton("Creator", "https://t.me/FLOATING_HEART_HD")
     uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
@@ -283,11 +283,11 @@ def main():
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("Restarted successfully!", chat_id, msg_id)
+        bot.edit_message_text("Ꭱᴇsᴛᴀʀᴛᴇᴅ Տᴜᴄᴄᴇssғᴜʟʟʏ!", chat_id, msg_id)
         osremove(".restartmsg")
     elif OWNER_ID:
         try:
-            text = "<b>Bot Restarted!</b>"
+            text = "<b>ᴛʜᴇ ʙᴇɢɪɴɴɪɴɢ ɪs ᴀʟᴡᴀʏs ᴛᴏᴅᴀʏ🌝\n\n  ⚡Ᏼᴏᴛ Ꭱᴇsᴛᴀʀᴛᴇᴅ⚡\n\n𝙿𝙻𝙴𝙰𝚂𝙴 𝚁𝙴-𝙼𝙸𝚁𝚁𝙾𝚁 𝙰𝙶𝙰𝙸𝙽</b>"
             message = bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
             if AUTHORIZED_CHATS:
                 for i in AUTHORIZED_CHATS:
