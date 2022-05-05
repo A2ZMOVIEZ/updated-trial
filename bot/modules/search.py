@@ -192,7 +192,7 @@ def _getResult(search_results, key, message, tool):
 
     editMessage(f"<b>Creating</b> {len(telegraph_content)} <b>Telegraph pages.</b>", message)
     path = [telegraph.create_page(
-                title='Helios-Mirror Torrent Search',
+                title='ᎡᴏᴄᴋʏХᏟʟᴏᴜᴅs Ͳᴏʀʀᴇɴᴛ Տᴇᴀʀᴄʜ',
                 content=content
             )["path"] for content in telegraph_content]
     sleep(0.5)
@@ -218,7 +218,7 @@ def _edit_telegraph(path, telegraph_content):
                 nxt_page += 1
         telegraph.edit_page(
             path = path[prev_page],
-            title = 'Helios-Mirror Torrent Search',
+            title = 'ᎡᴏᴄᴋʏХᏟʟᴏᴜᴅs Ͳᴏʀʀᴇɴᴛ Տᴇᴀʀᴄʜ',
             content=content
         )
     return
