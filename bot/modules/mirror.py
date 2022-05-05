@@ -254,7 +254,7 @@ class MirrorListener:
             if self.message.chat.type == 'private':
                 warnmsg = ''
             else:
-                warnmsg = f'\n<b>𝚃𝙷𝙴 𝙼𝙸𝚁𝚁𝙾𝚁𝙴𝙳 𝙻𝙸𝙽𝙺 𝚆𝙸𝙻𝙻 𝙱𝙴 𝙳𝙴𝙻𝙴𝚃𝙴𝙳 𝙸𝙽<i>{auto_delete_message} 𝙼𝙸𝙽𝚄𝚃𝙴𝚂</i> 𝙵𝚁𝙾𝙼 𝚃𝙷𝙸𝚂 𝙶𝚁𝙾𝚄𝙿.</b>\n'
+                warnmsg = f'\n<b>𝚃𝙷𝙸𝚂 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝚆𝙸𝙻𝙻 𝙱𝙴 𝙳𝙴𝙻𝙴𝚃𝙴𝙳 𝙸𝙽<i>{auto_delete_message} 𝙼𝙸𝙽𝚄𝚃𝙴𝚂</i> 𝙵𝚁𝙾𝙼 𝚃𝙷𝙸𝚂 𝙶𝚁𝙾𝚄𝙿.</b>\n'
         else:
             warnmsg = ''
         if BOT_PM and self.message.chat.type != 'private':
