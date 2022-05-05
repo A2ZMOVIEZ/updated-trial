@@ -74,12 +74,12 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         if BOT_PM:
-            message = sendMessage(f'Dear {uname},\n\nIf You Want To Use Me, You Have To Join @{CHANNEL_USERNAME}\n\n<b>NOTE:</b> All The Uploaded Links and Leeched Files By You Will Be Sent Here In Your Private Chat From Now.', context.bot, update)
+            message = sendMessage(f'Dear {uname},\n\nIf You Want To Use Me, You Have To Join @ROCKYXCLOUDS \n\n<b>NOTE:</b> All The Uploaded Links and Leeched Files By You Will Be Sent Here In Your Private Chat From Now.', context.bot, update)
             Thread(target=auto_delete_message, args=(context.bot, update.message, message)).start()
             return
         else:
             message = sendMarkup(
-                f'Dear {uname},\n\nIf You Want To Use Me, You Have To Join @{CHANNEL_USERNAME}\n\n',
+                f'Dear {uname},\n\nIf You Want To Use Me, You Have To Join @ROCKYXCLOUDS \n\n',
                 context.bot, update, reply_markup)
             Thread(target=auto_delete_message, args=(context.bot, update.message, message)).start()
             return
@@ -210,12 +210,12 @@ leech_help_string_telegraph = f'''<br>
 '''
 if LEECH_ENABLED:
     help = telegraph.create_page(
-        title='Helios-Mirror & Leech Help',
+        title='RockyXClouds & Leech Help',
         content=mirror_help_string_telegraph + leech_help_string_telegraph,
     )["path"]
 else:
     help = telegraph.create_page(
-        title='Helios-Mirror Help',
+        title='RockyXClouds Help',
         content=mirror_help_string_telegraph,
     )["path"]
 
@@ -223,7 +223,7 @@ else:
 if user_id == OWNER_ID:
     try:
         help = telegraph.create_page(
-        title='Helios-Mirror Help',
+        title='RockyXClouds Help',
         content=mirror_help_string_telegraph + leech_help_string_telegraph + sudo_help_string_telegraph,
     )["path"]
     except Exception as e:
