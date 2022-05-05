@@ -50,7 +50,7 @@ def cloneNode(update, context):
                 [InlineKeyboardButton("𝚂𝚃𝙰𝚁𝚃 𝙼𝙴", url=f"{botstart}")],
                 [InlineKeyboardButton("𝙹𝙾𝙸𝙽 𝙷𝙴𝚁𝙴 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴", url=f"t.me/{channel}")]]
             message = sendMarkup(
-                f"Dear {uname},\n\n<b>I found that you haven't started me in PM (Private Chat) yet.</b>\n\nFrom now on i will give link and leeched files in PM and log channel only.",
+                f"Dear {uname},\n\n<b>𝙸 𝙵𝙾𝚄𝙽𝙳 𝚃𝙷𝙰𝚃 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴𝙽'𝚃 𝚂𝚃𝙰𝚁𝚃𝙴𝙳 𝙼𝙴 𝙸𝙽 𝙿𝙼(Private Chat) 𝚈𝙴𝚃.</b>\n\n𝙵𝚁𝙾𝙼 𝙽𝙾𝚆 𝙾𝙽 𝙸 𝚆𝙸𝙻𝙻 𝙶𝙸𝚅𝙴 𝙻𝙸𝙽𝙺 & 𝙻𝙴𝙴𝙲𝙷𝙴𝙳 𝙵𝙸𝙻𝙴𝚂 𝙸𝙽 𝙿𝙼 & 𝙻𝙾𝙶 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝙾𝙽𝙻𝚈.",
                 bot, update, reply_markup=InlineKeyboardMarkup(keyboard))
             Thread(target=auto_delete_message, args=(bot, update.message, message)).start()
             return
@@ -138,9 +138,9 @@ def cloneNode(update, context):
                 if update.message.chat.type == 'private':
                     warnmsg = ''
                 else:
-                    warnmsg = f'\n<b>This message will be deleted in <i>{auto_delete_message} minutes</i> from this group.</b>\n'
+                    warnmsg = f'\n<b>𝚃𝙷𝙸𝚂 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝚆𝙸𝙻𝙻 𝙱𝙴 𝙳𝙴𝙻𝙴𝚃𝙴𝙳 𝙸𝙽 <i>{auto_delete_message} 𝙼𝙸𝙽𝚄𝚃𝙴𝚂</i> 𝙵𝚁𝙾𝙼 𝚃𝙷𝙸𝚂 𝙶𝚁𝙾𝚄𝙿.</b>\n'
         if BOT_PM and update.message.chat.type != 'private':
-            pmwarn = f"\n<b>I have sent links in PM.</b>\n"
+            pmwarn = f"\n<b>𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙻𝙸𝙽𝙺𝚂 𝙸𝙽 𝙿𝙼.</b>\n"
         elif update.message.chat.type == 'private':
             pmwarn = ''
         else:
