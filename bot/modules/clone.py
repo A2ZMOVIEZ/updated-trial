@@ -36,7 +36,7 @@ def cloneNode(update, context):
             pass
     if BOT_PM:
         try:
-            msg1 = f'Added your Requested link to clone\n'
+            msg1 = f'𝙰𝙳𝙳𝙴𝙳 𝚈𝙾𝚄𝚁 𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙻𝙸𝙽𝙺 𝚃𝙾 𝙲𝙻𝙾𝙽𝙴\n'
             send = bot.sendMessage(update.message.from_user.id, text=msg1,)
             send.delete()
         except Exception as e:
@@ -47,8 +47,8 @@ def cloneNode(update, context):
             channel = CHANNEL_USERNAME
             botstart = f"http://t.me/{b_uname}"
             keyboard = [
-                [InlineKeyboardButton("Click Here to Start Me", url=f"{botstart}")],
-                [InlineKeyboardButton("Join our Updates Channel", url=f"t.me/{channel}")]]
+                [InlineKeyboardButton("𝚂𝚃𝙰𝚁𝚃 𝙼𝙴", url=f"{botstart}")],
+                [InlineKeyboardButton("𝙹𝙾𝙸𝙽 𝙷𝙴𝚁𝙴 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴", url=f"t.me/{channel}")]]
             message = sendMarkup(
                 f"Dear {uname},\n\n<b>I found that you haven't started me in PM (Private Chat) yet.</b>\n\nFrom now on i will give link and leeched files in PM and log channel only.",
                 bot, update, reply_markup=InlineKeyboardMarkup(keyboard))
