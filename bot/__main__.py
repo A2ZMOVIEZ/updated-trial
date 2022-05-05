@@ -74,12 +74,12 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         if BOT_PM:
-            message = sendMessage(f'Dear {uname},\n\nIf You Want To Use Me, You Have To Join @ROCKYXCLOUDS \n\n<b>NOTE:</b> All The Uploaded Links and Leeched Files By You Will Be Sent Here In Your Private Chat From Now.', context.bot, update)
+            message = sendMessage(f'Dear {uname},\n\n ThankYou For Subscribing Me /n From Now On I Will Give Your Mirrored Links & Leeched Files in pm.', context.bot, update)
             Thread(target=auto_delete_message, args=(context.bot, update.message, message)).start()
             return
         else:
             message = sendMarkup(
-                f'Dear {uname},\n\nIf You Want To Use Me, You Have To Join @ROCKYXCLOUDS \n\n',
+                f'Dear {uname},\n\n ThankYou For Subscribing Me\n\n',
                 context.bot, update, reply_markup)
             Thread(target=auto_delete_message, args=(context.bot, update.message, message)).start()
             return
