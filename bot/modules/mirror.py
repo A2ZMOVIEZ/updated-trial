@@ -254,25 +254,25 @@ class MirrorListener:
             if self.message.chat.type == 'private':
                 warnmsg = ''
             else:
-                warnmsg = f'\n<b>This message will be deleted in <i>{auto_delete_message} minutes</i> from this group.</b>\n'
+                warnmsg = f'\n<b>𝚃𝙷𝙴 𝙼𝙸𝚁𝚁𝙾𝚁𝙴𝙳 𝙻𝙸𝙽𝙺 𝚆𝙸𝙻𝙻 𝙱𝙴 𝙳𝙴𝙻𝙴𝚃𝙴𝙳 𝙸𝙽<i>{auto_delete_message} 𝙼𝙸𝙽𝚄𝚃𝙴𝚂</i> 𝙵𝚁𝙾𝙼 𝚃𝙷𝙸𝚂 𝙶𝚁𝙾𝚄𝙿.</b>\n'
         else:
             warnmsg = ''
         if BOT_PM and self.message.chat.type != 'private':
-            pmwarn = f"\n<b>I have sent files in PM.</b>\n"
-            pmwarn_mirror = f"\n<b>I have sent links in PM.</b>\n"
+            pmwarn = f"\n<b>𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙵𝙸𝙻𝙴𝚂 𝙸𝙽 𝙿𝙼.</b>\n"
+            pmwarn_mirror = f"\n<b>𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙻𝙸𝙽𝙺𝚂 𝙸𝙽 𝙿𝙼.</b>\n"
         elif self.message.chat.type == 'private':
             pmwarn = ''
             pmwarn_mirror = ''
         else:
             pmwarn = ''
             pmwarn_mirror = ''
-        logwarn = f"\n<b>I have sent files in Log Channel.</b>\n"
+        logwarn = f"\n<b>𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙵𝙸𝙻𝙴 𝙸𝙽 𝙻𝙾𝙶 𝙲𝙷𝙰𝙽𝙽𝙴𝙻.</b>\n"
         if self.isLeech:
             count = len(files)
-            msg += f'\n<b>Total Files: </b>{count}'
+            msg += f'\n<b>Ͳᴏᴛᴀʟ Ғɪʟᴇs: </b>{count}'
             if typ != 0:
-                msg += f'\n<b>Corrupted Files: </b>{typ}'
-            msg += f'\n<b>#Leeched By: </b>{self.tag}\n'
+                msg += f'\n<b>Ꮯᴏʀʀᴜᴘᴛᴇᴅ Ғɪʟᴇs: </b>{typ}'
+            msg += f'\n<b>#Ꮮᴇᴇᴄʜᴇᴅ Ᏼʏ: </b>{self.tag}\n'
             if BOT_PM:
                 message = sendMessage(msg + pmwarn + warnmsg, self.bot, self.update)
                 Thread(target=auto_delete_upload_message, args=(bot, self.message, message)).start()
@@ -326,10 +326,10 @@ class MirrorListener:
             else:
                 update_all_messages()
         else:
-            msg += f'\n\n<b>Type: </b>{typ}'
+            msg += f'\n\n<b>Ͳʏᴘᴇ: </b>{typ}'
             if ospath.isdir(f'{DOWNLOAD_DIR}{self.uid}/{name}'):
-                msg += f'\n<b>SubFolders: </b>{folders}'
-                msg += f'\n<b>Files: </b>{files}'
+                msg += f'\n<b>ՏᴜʙҒᴏʟᴅᴇʀs: </b>{folders}'
+                msg += f'\n<b>Ғɪʟᴇs: </b>{files}'
             link = short_url(link)
             buttons.buildbutton("☁️ Drive Link", link)
             LOGGER.info(f'Done Uploading {name}')
@@ -355,7 +355,7 @@ class MirrorListener:
             if SOURCE_LINK is True:
                 buttons.buildbutton(f"🔗 Source Link", S_link)
             """
-            uploader = f'\n\n<b>#Uploaded By: </b>{self.tag}\n'
+            uploader = f'\n\n<b>#Ⴎᴘʟᴏᴀᴅᴇᴅ Ᏼʏ: </b>{self.tag}\n'
             if MIRROR_LOGS:
                 try:
                     for i in MIRROR_LOGS:
@@ -433,7 +433,7 @@ def _mirror(bot, update, isZip=False, extract=False, isQbit=False, isLeech=False
                 buttons.buildbutton("Click Here To Join Updates Channel", f"https://t.me/{CHANNEL_USERNAME}")
                 reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
                 message = sendMarkup(
-                    str(f"<b>Dear {uname}️ You haven't join our Updates Channel yet.</b>\n\nKindly Join @{CHANNEL_USERNAME} To Use Bots. "),
+                    str(f"<b>Dear {uname}️ You haven't join our Updates Channel yet.</b>\n\nKindly Join @{CHANNEL_USERNAME} To Use Our Bots. "),
                     bot, update, reply_markup)
                 Thread(target=auto_delete_upload_message, args=(bot, update.message, message)).start()
                 return
@@ -452,7 +452,7 @@ def _mirror(bot, update, isZip=False, extract=False, isQbit=False, isLeech=False
             pass
     if BOT_PM:
         try:
-            msg1 = f'Added your Requested link to Download\n'
+            msg1 = f'𝙰𝙳𝙳𝙴𝙳 𝚈𝙾𝚄𝚁 𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙻𝙸𝙽𝙺 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳\n'
             send = bot.sendMessage(update.message.from_user.id, text=msg1, )
             send.delete()
         except Exception as e:
@@ -463,10 +463,10 @@ def _mirror(bot, update, isZip=False, extract=False, isQbit=False, isLeech=False
             channel = CHANNEL_USERNAME
             botstart = f"http://t.me/{b_uname}"
             keyboard = [
-                [InlineKeyboardButton("Click Here to Start Me", url=f"{botstart}")],
-                [InlineKeyboardButton("Join our Updates Channel", url=f"t.me/{channel}")]]
+                [InlineKeyboardButton("𝚂𝚃𝙰𝚁𝚃 𝙼𝙴", url=f"{botstart}")],
+                [InlineKeyboardButton("𝙹𝙾𝙸𝙽 𝙷𝙴𝚁𝙴 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴", url=f"t.me/{channel}")]]
             message = sendMarkup(
-                f"Dear {uname},\n\n<b>I found that you haven't started me in PM (Private Chat) yet.</b>\n\nFrom now on i will give link and leeched files in PM and log channel only",
+                f"Dear {uname},\n\n<b>𝙸 𝙵𝙾𝚄𝙽𝙳 𝚃𝙷𝙰𝚃 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴𝙽'𝚃 𝚂𝚃𝙰𝚁𝚃𝙴𝙳 𝙼𝙴 𝙸𝙽 𝙿𝙼(Private Chat) 𝚈𝙴𝚃.</b>\n\n𝙵𝚁𝙾𝙼 𝙽𝙾𝚆 𝙾𝙽 𝙸 𝚆𝙸𝙻𝙻 𝙶𝙸𝚅𝙴 𝚃𝙷𝙴 𝙼𝙸𝚁𝚁𝙾𝚁𝙴𝙳 𝙻𝙸𝙽𝙺𝚂 & 𝙻𝙴𝙴𝙲𝙷𝙴𝙳 𝙵𝙸𝙻𝙴𝚂 𝙸𝙽 𝙿𝙼 & 𝙻𝙾𝙶 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝙾𝙽𝙻𝚈",
                 bot, update, reply_markup=InlineKeyboardMarkup(keyboard))
             Thread(target=auto_delete_message, args=(bot, update.message, message)).start()
             return
