@@ -549,30 +549,30 @@ except KeyError:
 try:
     GD_INFO = getConfig('GD_INFO')
     if len(GD_INFO) == 0:
-        GD_INFO = 'Uploaded by Helios Mirror Bot'
+        GD_INFO = 'Uploaded by ᎡᴏᴄᴋʏХᏴᴏᴛ'
 except KeyError:
-    GD_INFO = 'Uploaded by Helios Mirror Bot'
+    GD_INFO = 'Uploaded by ᎡᴏᴄᴋʏХᏴᴏᴛ'
 
 try:
     TITLE_NAME = getConfig('TITLE_NAME')
     if len(TITLE_NAME) == 0:
-        TITLE_NAME = 'Helios-Mirror-Search'
+        TITLE_NAME = 'ᎡᴏᴄᴋʏХᏟʟᴏᴜᴅs'
 except KeyError:
-    TITLE_NAME = 'Helios-Mirror-Search'
+    TITLE_NAME = 'ᎡᴏᴄᴋʏХᏟʟᴏᴜᴅs'
 
 try:
     AUTHOR_NAME = getConfig('AUTHOR_NAME')
     if len(AUTHOR_NAME) == 0:
-        AUTHOR_NAME = 'Helios-Mirror-Bot'
+        AUTHOR_NAME = 'ᎡᴏᴄᴋʏХᏴᴏᴛ'
 except KeyError:
-    AUTHOR_NAME = 'Helios-Mirror-Bot'
+    AUTHOR_NAME = 'ᎡᴏᴄᴋʏХᏴᴏᴛ'
 
 try:
     AUTHOR_URL = getConfig('AUTHOR_URL')
     if len(AUTHOR_URL) == 0:
-        AUTHOR_URL = 'https://t.me/heliosmirror'
+        AUTHOR_URL = 'https://t.me/+6IWd7oJ3YLk0NWY9'
 except KeyError:
-    AUTHOR_URL = 'https://t.me/heliosmirror'
+    AUTHOR_URL = 'https://t.me/+6IWd7oJ3YLk0NWY9'
 
 try:
     BOT_PM = getConfig('BOT_PM')
@@ -595,10 +595,10 @@ except Exception as error:
 try:
     CHANNEL_USERNAME: str = getConfig('CHANNEL_USERNAME').replace("@", "")
     if len(CHANNEL_USERNAME) == 0:
-        CHANNEL_USERNAME = 'heliosmirror'
+        CHANNEL_USERNAME = 'ROCKYXCLOUDSCH'
 except KeyError:
     logging.warning('CHANNEL_USERNAME not provided')
-    CHANNEL_USERNAME = 'heliosmirror'
+    CHANNEL_USERNAME = 'ROCKYXCLOUDSCH'
 
 try:
     LEECH_ENABLED = getConfig('LEECH_ENABLED')
